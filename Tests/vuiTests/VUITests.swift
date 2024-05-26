@@ -1,7 +1,7 @@
 import XCTest
-@testable import vui
+@testable import VUI
 
-final class vuiTests: XCTestCase {
+final class VUITests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest

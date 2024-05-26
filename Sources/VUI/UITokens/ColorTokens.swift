@@ -1,15 +1,15 @@
 //
-//  ColorToken.swift
+//  ColorTokens.swift
 //
 //
 //  Created by Victor Pereira de Paula on 25/05/24.
 //
 
-public protocol ColorToken {
+public protocol ColorTokens {
     var primary: Color { get }
     var onPrimary: Color { get }
-    var Container: Color { get }
-    var onContainer: Color { get }
+    var primaryContainer: Color { get }
+    var onPrimaryContainer: Color { get }
     
     var secondary: Color { get }
     var onSecondary: Color { get }

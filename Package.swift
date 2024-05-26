@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "vui",
+    name: "VUI",
     platforms: [
         .iOS(.v13),
         .watchOS(.v6)
@@ -12,16 +12,16 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "vui",
-            targets: ["vui"]),
+            name: "VUI",
+            targets: ["VUI"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "vui"),
+            name: "VUI"),
         .testTarget(
-            name: "vuiTests",
-            dependencies: ["vui"]),
+            name: "VUITests",
+            dependencies: ["VUI"]),
     ]
 )
