@@ -43,7 +43,6 @@ public extension Color {
     static var surfaceDim: Color { colorTokens.surfaceDim }
     static var surface: Color { colorTokens.surface }
     static var surfaceBright: Color { colorTokens.surfaceBright }
-    
     static var surfaceContainerLowest: Color { colorTokens.surfaceContainerLowest }
     static var surfaceContainerLow: Color { colorTokens.surfaceContainerLow }
     static var surfaceContainer: Color { colorTokens.surfaceContainer }

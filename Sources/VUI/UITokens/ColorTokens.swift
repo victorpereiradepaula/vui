@@ -39,7 +39,6 @@ public protocol ColorTokens {
     var surfaceDim: Color { get }
     var surface: Color { get }
     var surfaceBright: Color { get }
-    
     var surfaceContainerLowest: Color { get }
     var surfaceContainerLow: Color { get }
     var surfaceContainer: Color { get }
