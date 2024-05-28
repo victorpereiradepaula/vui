@@ -17,7 +17,6 @@ open class VUITokensManager {
     public static var shared = VUITokensManager()
     
     private init() {
-        print(UserDefaults.standard.integer(forKey: userInterfaceStyleKey))
         self.userInterfaceStyle = UIUserInterfaceStyle(rawValue: UserDefaults.standard.integer(forKey: userInterfaceStyleKey)) ?? .unspecified
     }
     
