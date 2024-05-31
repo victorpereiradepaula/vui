@@ -15,12 +15,21 @@ Descrição
 
 ## Funcionalidades
 
+- [ ] Manager
+    - [x] Configuração
+    - [x] Controle UIUserInterfaceStyle do da aplicação
 - [ ] Design tokens
-    - [ ] Cor
+    - [x] Cor
+    - [ ] Shape
+    - [ ] Spacing
 
 ## Exemplos
 
-<!-- ![SAMPLE_NAME](SAMPLE_URL) -->
+### Tokens de cor
+
+### Tokens de shape
+
+### Tokens de spacing
 
 ## Referências
 

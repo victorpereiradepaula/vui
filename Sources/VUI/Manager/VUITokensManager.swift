@@ -13,7 +13,7 @@ public class VUITokensManager {
     
     private init() {}
     
-    public func configure(_ lightColorTokens: ColorTokens, _ darkColorTokens: ColorTokens? = nil) {
+    public func configure(shapeTokens: ShapeTokens? = nil, lightColorTokens: ColorTokens, darkColorTokens: ColorTokens? = nil) {
         self.lightColorTokens = lightColorTokens
         self.darkColorTokens = darkColorTokens ?? lightColorTokens
     }
