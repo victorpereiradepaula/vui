@@ -1,6 +1,6 @@
-# PROJECT_NAME
+# VUI
 
-Descrição
+V UI ou VUI é um projeto open source de design system que utiliza conceitos de design tokens aplicados em SwiftUI. O objetivo é trazer uma estrutura básica customizável que possa ser utilizada na criação de interfaces em SwiftUI, de forma prática e contribuindo para a padronização do projeto.
 
 [![GitHub license](https://img.shields.io/github/license/victorpereiradepaula/vui)](https://github.com/victorpereiradepaula/vui/blob/master/LICENSE)
 [![Xcode 15.4+](https://img.shields.io/badge/Xcode-15.4%2B-blue.svg)](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes)
