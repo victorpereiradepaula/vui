@@ -9,8 +9,8 @@ fileprivate let userInterfaceStyleKey = "VUIUserInterfaceStyleKey"
 
 extension VUITokensManager {
     public var userInterfaceStyle: UIUserInterfaceStyle {
-        let savedUserInterfaceStyle = UserDefaults.standard.object(forKey: userInterfaceStyleKey) as? Int
-        return UIUserInterfaceStyle(rawValue: savedUserInterfaceStyle ?? .zero) ?? .unspecified
+        let savedUserInterfaceStyle = UserDefaults.standard.integer(forKey: userInterfaceStyleKey)
+        return UIUserInterfaceStyle(rawValue: savedUserInterfaceStyle) ?? .unspecified
     }
     
     var colorTokens: ColorTokens {

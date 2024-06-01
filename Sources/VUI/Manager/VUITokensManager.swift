@@ -8,13 +8,14 @@
 public class VUITokensManager {
     var lightColorTokens: ColorTokens = DefaultColorTokens()
     var darkColorTokens: ColorTokens = DefaultColorTokens()
+    var spacingTokens: SpacingTokens = DefaultSpacingTokens()
     
     public static var shared = VUITokensManager()
     
     private init() {}
     
-    public func configure(shapeTokens: ShapeTokens? = nil, lightColorTokens: ColorTokens, darkColorTokens: ColorTokens? = nil) {
-        self.lightColorTokens = lightColorTokens
-        self.darkColorTokens = darkColorTokens ?? lightColorTokens
+    public func configure(colorTokens: ColorTokens, darkColorTokens: ColorTokens? = nil, spacingTokens: SpacingTokens? = nil, shapeTokens: ShapeTokens? = nil) {
+        self.lightColorTokens = colorTokens
+        self.darkColorTokens = darkColorTokens ?? colorTokens
     }
 }
