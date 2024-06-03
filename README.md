@@ -10,7 +10,7 @@ V UI ou VUI é um projeto open source de design system que utiliza conceitos de 
 ## Índice
 
 1. [Funcionalidades](#funcionalidades)
-1. [Exemplos](#exemplos)
+1. [Guia de uso](#guia-de-uso)
 1. [Referências](#referências)
 
 ## Funcionalidades
@@ -91,7 +91,15 @@ Uma vez configurados, basta utilizar da mesma forma como utilizamos as cores do 
         .padding(.medium)
     ```
 
-### Tokens de forma
+### Tokens de curvatura dos cantos
+
+- Exemplo:
+    ```swift
+    Text("Olá mundo!")
+        .padding(.medium)
+        .background(.primary)
+        .cornerRadius(token: .full, corners: .allCorners)
+    ```
 
 ### Tokens de Elevação
 

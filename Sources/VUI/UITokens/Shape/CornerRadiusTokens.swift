@@ -1,11 +1,11 @@
 //
-//  ShapeTokens.swift
+//  CornerRadiusTokens.swift
 //
 //
 //  Created by Victor Pereira de Paula on 31/05/24.
 //
 
-public protocol ShapeTokens {
+public protocol CornerRadiusTokens {
     var none: CGFloat { get }
     var xSmall: CGFloat { get }
     var small: CGFloat { get }

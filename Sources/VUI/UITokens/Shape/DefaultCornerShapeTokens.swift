@@ -1,13 +1,13 @@
 //
-//  DefaultShapeTokens.swift
+//  DefaultCornerRadiusTokens.swift
 //
 //
 //  Created by Victor Pereira de Paula on 31/05/24.
 //
 
-struct DefaultShapeTokens: ShapeTokens {}
+struct DefaultCornerRadiusTokens: CornerRadiusTokens {}
 
-public extension ShapeTokens {
+public extension CornerRadiusTokens {
     var none: CGFloat { .zero }
     var xSmall: CGFloat { 2 }
     var small: CGFloat { 4 }
