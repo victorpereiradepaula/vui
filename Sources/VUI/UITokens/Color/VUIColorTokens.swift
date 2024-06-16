@@ -1,11 +1,11 @@
 //
-//  ColorTokens.swift
+//  VUIColorTokens.swift
 //
 //
 //  Created by Victor Pereira de Paula on 25/05/24.
 //
 
-public protocol ColorTokens {
+public protocol VUIColorTokens {
     var primary: Color { get }
     var onPrimary: Color { get }
     var primaryContainer: Color { get }

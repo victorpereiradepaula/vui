@@ -5,7 +5,7 @@
 //  Created by Victor Pereira de Paula on 02/06/24.
 //
 
-fileprivate var cornerRadiusTokens: CornerRadiusTokens {
+fileprivate var cornerRadiusTokens: VUICornerRadiusTokens {
     VUITokensManager.shared.cornerRadiusTokens
 }
 

@@ -5,7 +5,7 @@
 //  Created by Victor Pereira de Paula on 31/05/24.
 //
 
-fileprivate var spacingTokens: SpacingTokens {
+fileprivate var spacingTokens: VUISpacingTokens {
     VUITokensManager.shared.spacingTokens
 }
 

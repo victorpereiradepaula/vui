@@ -5,7 +5,7 @@
 //  Created by Victor Pereira de Paula on 25/05/24.
 //
 
-fileprivate var colorTokens: ColorTokens {
+fileprivate var colorTokens: VUIColorTokens {
     VUITokensManager.shared.colorTokens
 }
 

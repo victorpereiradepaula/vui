@@ -13,7 +13,7 @@ extension VUITokensManager {
         return UIUserInterfaceStyle(rawValue: savedUserInterfaceStyle) ?? .unspecified
     }
     
-    var colorTokens: ColorTokens {
+    var colorTokens: VUIColorTokens {
         switch userInterfaceStyle {
         case .dark: return darkColorTokens
         case .light: return lightColorTokens

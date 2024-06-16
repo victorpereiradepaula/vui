@@ -5,9 +5,9 @@
 //  Created by Victor Pereira de Paula on 25/05/24.
 //
 
-struct DefaultColorTokens: ColorTokens {}
+struct DefaultColorTokens: VUIColorTokens {}
 
-public extension ColorTokens {
+public extension VUIColorTokens {
     var primary: Color { .init(red: 27/255, green: 26/255, blue: 82/255) }
     var onPrimary: Color { .init(white: 100) }
     var primaryContainer: Color { .init(red: 146/255, green: 144/255, blue: 191/255) }

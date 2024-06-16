@@ -5,9 +5,9 @@
 //  Created by Victor Pereira de Paula on 31/05/24.
 //
 
-struct DefaultSpacingTokens: SpacingTokens {}
+struct DefaultSpacingTokens: VUISpacingTokens {}
 
-public extension SpacingTokens {
+public extension VUISpacingTokens {
     var xSmall: CGFloat { 4 }
     var small: CGFloat { 8 }
     var medium: CGFloat { 16 }

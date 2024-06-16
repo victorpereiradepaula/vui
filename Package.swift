@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "VUI",
     platforms: [
-        .iOS(.v14),
+        .iOS(.v16),
         .watchOS(.v6)
     ],
     products: [

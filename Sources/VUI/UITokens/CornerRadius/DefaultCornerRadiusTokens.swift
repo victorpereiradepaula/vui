@@ -5,9 +5,9 @@
 //  Created by Victor Pereira de Paula on 31/05/24.
 //
 
-struct DefaultCornerRadiusTokens: CornerRadiusTokens {}
+struct DefaultCornerRadiusTokens: VUICornerRadiusTokens {}
 
-public extension CornerRadiusTokens {
+public extension VUICornerRadiusTokens {
     var none: CGFloat { .zero }
     var xSmall: CGFloat { 2 }
     var small: CGFloat { 4 }
