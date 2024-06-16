@@ -67,6 +67,7 @@ public struct VUIButton: View {
                 singleImage
                     .renderingMode(.template)
                     .tint(color)
+                    .padding(.small)
             } else {
                 let isLeftImage = alignment == .leading
                 let image = image?
@@ -74,12 +75,13 @@ public struct VUIButton: View {
                     .tint(color)
                     .background(backgroundColor)
                 let spacer = infintity ? Spacer() : nil
-                HStack {
+                HStack(spacing: .zero) {
                     if let image, isLeftImage {
                         image
                         spacer
                     }
                     Text(title)
+                        .padding(.horizontal, .small)
                         .tint(color)
                     if let image, !isLeftImage {
                         spacer
@@ -93,41 +95,48 @@ public struct VUIButton: View {
         .background(backgroundColor)
         .accessibilityLabel(title)
         .cornerRadius(token: .medium, corners: .allCorners)
-        .border(color, width: fill == .line ? 1 : .zero)
+        .border(color, width: borderWidth)
+    }
+    
+    var borderWidth: CGFloat {
+        return switch fill {
+        case .line: 1
+        case .none, .full: .zero
+        }
     }
     
     var padding: CGFloat {
-        switch fill {
-        case .none: return .zero
-        case .full, .line: return .medium
+        return switch fill {
+        case .none: .zero
+        case .full, .line: .medium
         }
     }
     
     var color: Color {
-        switch fill {
+        return switch fill {
         case .none, .line:
             switch style {
-            case .primary: return .primary
-            case .secundary: return .secondary
-            case .tertiary: return .tertiary
+            case .primary: .primary
+            case .secundary: .secondary
+            case .tertiary: .tertiary
             }
         case .full:
             switch style {
-            case .primary: return .onPrimary
-            case .secundary: return .onSecondary
-            case .tertiary: return .onTertiary
+            case .primary: .onPrimary
+            case .secundary: .onSecondary
+            case .tertiary: .onTertiary
             }
         }
     }
     
     var backgroundColor: Color {
-        switch fill {
-        case .none, .line: return .clear
+        return switch fill {
+        case .none, .line: .clear
         case .full:
             switch style {
-            case .primary: return .primary
-            case .secundary: return .secondary
-            case .tertiary: return .tertiary
+            case .primary: .primary
+            case .secundary: .secondary
+            case .tertiary: .tertiary
             }
         }
     }
@@ -141,7 +150,7 @@ public struct VUIButton: View {
         }
         VUIButton(title: "Direita",
                   style: .secundary,
-                  fill: .line,
+                  fill: .full,
                   titleImage: .init(image: .init(systemName: "chevron.right"))) {
             print("Direita")
         }
@@ -163,7 +172,7 @@ public struct VUIButton: View {
         }
         VUIButton(title: "Direita",
                   style: .secundary,
-                  fill: .full,
+                  fill: .line,
                   titleImage: .init(image: .init(systemName: "chevron.right")),
                   infintity: true) {
             print("Direita")
