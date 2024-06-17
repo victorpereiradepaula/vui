@@ -15,14 +15,14 @@ V UI ou VUI é um projeto open source de design system que utiliza conceitos de 
 
 ## Funcionalidades
 
-- [ ] Gerenciador
+- [x] Gerenciador
     - [x] [Configuração de tokens globais](#configuração-de-tokens-globais)
     - [x] [Controle UIUserInterfaceStyle da aplicação](#configuração-do-uiuserinterfacestyle-da-aplicação)
-- [ ] [Design tokens](#design-tokens)
+- [x] [Design tokens](#design-tokens)
+    - [x] [Borda](#tokens-de-borda)
     - [x] [Cor](#tokens-de-cor)
+    - [x] [Curvatura dos cantos](#tokens-de-curvatura-dos-cantos)
     - [x] [Espaçamento](#tokens-de-espaçamento)
-    - [ ] [Forma](#tokens-de-forma)
-    - [ ] [Elevação](#tokens-de-elevação)
 - [ ] Componentes
     - [x] [VUIButton](#vuibutton)
     - [x] [VUICard](#vuicard)
@@ -81,9 +81,23 @@ Para mudar o UIUserInterfaceStyle utilize o método `setUserInterfaceStyle`.
 
 ## Design tokens
 
+### Tokens de borda
+
+Caso as bordas possuam curvaturas nos cantos, recomendamos a utilização do `cornerRadius` informando o border:
+
+- Exemplo:
+    ```swift
+    Text("Olá mundo!")
+        .padding(.medium)
+        .cornerRadius(token: .full, corners: .allCorners, 
+                      border: VUIBorder(color: .outlineVariant, hasBorder: true))
+    ```
+    
+Pra os demais usos, utilizar as variáveis estáticas do tipo CGFloat `borderWidth` e `shadowRadius`, para tamanho da linha da borda e para o raio dos cantos respectivamente.
+
 ### Tokens de cor
 
-Uma vez configurados, basta utilizar da mesma forma como utilizamos as cores do sistema.
+Os tokens de cor são utilizados como as cores do sistema.
 
 - Exemplo:
     ```swift
@@ -92,15 +106,9 @@ Uma vez configurados, basta utilizar da mesma forma como utilizamos as cores do 
         .background(Color.primaryContainer)
     ```
 
-### Tokens de espaçamento
-
-- Exemplo:
-    ```swift
-    Text("Olá mundo!")
-        .padding(.medium)
-    ```
-
 ### Tokens de curvatura dos cantos
+
+Para a curvatura dos cantos utilizamos `cornerRadius`, informando o token, quais corners e/ou as [bordas](#tokens-de-borda):
 
 - Exemplo:
     ```swift
@@ -109,8 +117,16 @@ Uma vez configurados, basta utilizar da mesma forma como utilizamos as cores do 
         .background(.primary)
         .cornerRadius(token: .full, corners: .allCorners)
     ```
+    
+### Tokens de espaçamento
 
-### Tokens de Elevação
+Os tokens de espaçamento são utilizados com as seguintes variáveis estáticas `.xSmall`, `.small`, `.medium`, `.large`, `.xLarge`:
+
+- Exemplo:
+    ```swift
+    Text("Olá mundo!")
+        .padding(.medium)
+    ```
 
 ## Componentes
 

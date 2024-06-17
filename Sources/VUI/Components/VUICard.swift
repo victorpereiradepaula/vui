@@ -23,13 +23,13 @@ public struct VUICard<Content: View>: View {
             .cornerRadius(token: .medium, corners: .allCorners,
                           border: .init(color: .outlineVariant,
                                         hasBorder: fill.hasBorder))
-            .shadow(radius: shadowRadius)
+            .shadow(radius: radius)
     }
     
-    var shadowRadius: CGFloat {
+    var radius: CGFloat {
         return switch fill {
         case .none, .line: .zero
-        case .full: borderTokens.shadowRadius
+        case .full: .shadowRadius
         }
     }
 }
