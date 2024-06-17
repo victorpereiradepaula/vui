@@ -24,8 +24,8 @@ V UI ou VUI é um projeto open source de design system que utiliza conceitos de 
     - [ ] [Forma](#tokens-de-forma)
     - [ ] [Elevação](#tokens-de-elevação)
 - [ ] Componentes
-    - [ ] [VUIButton](#vuibutton)
-    - [ ] [VUICard](#vuicard)
+    - [x] [VUIButton](#vuibutton)
+    - [x] [VUICard](#vuicard)
     - [ ] [VUIFeedback](#vuifeedback)
     - [ ] [VUISelection](#vuiselection)
     - [ ] [VUISelectionGroup](#vuiselectiongroup)

@@ -19,10 +19,6 @@ public enum VUIButtonStyle: String, Codable {
     case primary, secundary, tertiary
 }
 
-public enum VUIFill: String, Codable {
-    case none, full, line
-}
-
 public struct VUIButton: View {
     private var singleImage: Image?
     private var image: Image?
@@ -94,15 +90,8 @@ public struct VUIButton: View {
         .padding(.all, padding)
         .background(backgroundColor)
         .accessibilityLabel(title)
-        .cornerRadius(token: .medium, corners: .allCorners)
-        .border(color, width: borderWidth)
-    }
-    
-    var borderWidth: CGFloat {
-        return switch fill {
-        case .line: 1
-        case .none, .full: .zero
-        }
+        .cornerRadius(token: .medium, corners: .allCorners, 
+                      border: .init(color: color, hasBorder: fill.hasBorder))
     }
     
     var padding: CGFloat {

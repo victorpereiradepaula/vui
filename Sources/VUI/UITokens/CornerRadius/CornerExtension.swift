@@ -25,7 +25,7 @@ public enum CornerRadiusToken {
     /// Value from CornerShapeTokens full
     case full
     
-    fileprivate var radius: CGFloat {
+    public  var radius: CGFloat {
         switch self {
         case .none: return cornerRadiusTokens.none
         case .xSmall: return cornerRadiusTokens.xSmall
@@ -39,15 +39,20 @@ public enum CornerRadiusToken {
 }
 
 public extension View {
-    func cornerRadius(token: CornerRadiusToken, corners: UIRectCorner) -> some View {
+    func cornerRadius(token: CornerRadiusToken, corners: UIRectCorner, border: VUIBorder? = nil) -> some View {
         clipShape(RoundedCorner(radius: token.radius, corners: corners))
+            .clipped()
+            .overlay(
+                RoundedCorner(radius: token.radius, corners: corners)
+                    .stroke(border?.color ?? .clear, lineWidth: border?.borderWidth ?? .zero)
+            )
     }
 }
 
 struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
-
+    
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)

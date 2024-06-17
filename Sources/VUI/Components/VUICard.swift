@@ -7,22 +7,52 @@
 
 import SwiftUI
 
-public struct VUICard: View {
+public struct VUICard<Content: View>: View {
+    var content: Content
+    var fill: VUIFill
+    
+    init(fill: VUIFill, @ViewBuilder content: () -> Content) {
+        self.fill = fill
+        self.content = content()
+    }
+    
     public var body: some View {
-        HStack { // Card
-            // Left content
-            VStack { // Content
-                // Image
-                HStack { // Title
-                    // Image and/or Text
-                } // Title
-                // Free content
-            } // Content
-            // Image or Button
-        } // Card
+        content
+            .padding(.medium)
+            .background(Color.surface)
+            .cornerRadius(token: .medium, corners: .allCorners,
+                          border: .init(color: .outlineVariant,
+                                        hasBorder: fill.hasBorder))
+            .shadow(radius: shadowRadius)
+    }
+    
+    var shadowRadius: CGFloat {
+        return switch fill {
+        case .none, .line: .zero
+        case .full: borderTokens.shadowRadius
+        }
     }
 }
 
 #Preview {
-    VUICard()
+    VStack(spacing: .xLarge) {
+        VUICard(fill: .full) {
+            Text("Full")
+                .frame(height: 100)
+                .frame(maxWidth: .infinity)
+        }
+        
+        VUICard(fill: .line) {
+            Text("Line")
+                .frame(height: 100)
+                .frame(maxWidth: .infinity)
+        }
+        
+        VUICard(fill: .none) {
+            Text("None")
+                .frame(height: 100)
+                .frame(maxWidth: .infinity)
+        }
+    }
+    .padding()
 }
