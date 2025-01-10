@@ -1,11 +1,11 @@
 # VUI
 
-V UI ou VUI é um projeto open source de design system que utiliza conceitos de design tokens aplicados em SwiftUI. O objetivo é trazer uma estrutura básica customizável que possa ser utilizada na criação de interfaces em SwiftUI, de forma prática e contribuindo para a padronização do projeto.
-
 [![GitHub license](https://img.shields.io/github/license/victorpereiradepaula/vui)](https://github.com/victorpereiradepaula/vui/blob/master/LICENSE)
 [![Xcode 15.4+](https://img.shields.io/badge/Xcode-15.4%2B-blue.svg)](https://developer.apple.com/documentation/Xcode-Release-Notes/xcode-15_4-release-notes)
 [![Swift 5.1+](https://img.shields.io/badge/Swift-5.1%2B-orange.svg)](https://github.com/apple/swift/releases/tag/swift-5.10-RELEASE)
 [![iOS 13+](https://img.shields.io/badge/iOS-13%2B-purple)](https://support.apple.com/pt-br/118392)
+
+V UI ou VUI é um projeto open source de design system que utiliza conceitos de design tokens aplicados em SwiftUI. O objetivo é trazer uma estrutura básica customizável que possa ser utilizada na criação de interfaces em SwiftUI, de forma prática e contribuindo para a padronização do projeto.
 
 ## Índice
 
@@ -140,8 +140,8 @@ Os tokens de espaçamento são utilizados com as seguintes variáveis estáticas
 
 ### VUISelectionGroup
 
-### Referências
-
 ### VUITextField
+
+## Referências
 
 [Material design - color roles](https://m3.material.io/styles/color/roles)
