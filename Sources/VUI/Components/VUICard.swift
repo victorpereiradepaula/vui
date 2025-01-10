@@ -11,7 +11,7 @@ public struct VUICard<Content: View>: View {
     var content: Content
     var fill: VUIFill
     
-    init(fill: VUIFill, @ViewBuilder content: () -> Content) {
+    public init(fill: VUIFill, @ViewBuilder content: () -> Content) {
         self.fill = fill
         self.content = content()
     }
